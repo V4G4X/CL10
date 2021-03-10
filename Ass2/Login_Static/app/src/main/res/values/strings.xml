@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Login</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="pers_details">Personal Details</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone Number</string>
+    <string name="fill_details">Fill Details</string>
+
+    <string name="prof_details">Professional Details</string>
+    <string name="degree">Degree</string>
+    <string name="college">College</string>
+    <string name="grad_year">Graduation Year</string>
+    <string name="branch">Branch</string>
+</resources>

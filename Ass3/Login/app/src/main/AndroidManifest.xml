@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.varun.login">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/form_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/form_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Login">
+        <activity
+            android:name=".view.activity.admin.Dashboard"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".view.activity.registration.FormSecond"
+            android:parentActivityName=".view.activity.registration.FormFirst" />
+        <activity android:name=".view.activity.registration.FormFirst"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
