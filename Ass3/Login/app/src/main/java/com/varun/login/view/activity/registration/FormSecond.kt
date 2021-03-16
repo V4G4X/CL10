@@ -1,6 +1,7 @@
 package com.varun.login.view.activity.registration
 
 import android.content.Intent
+import android.graphics.DashPathEffect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
@@ -9,9 +10,11 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.varun.login.ADMIN_LOGGED_IN
 import com.varun.login.MainActivity
 import com.varun.login.R
 import com.varun.login.model.User
+import com.varun.login.view.activity.admin.Dashboard
 import com.varun.login.viewModel.UserViewModel
 
 class FormSecond : AppCompatActivity() {
@@ -62,7 +65,10 @@ class FormSecond : AppCompatActivity() {
             )
             mUserViewModel.addUser(user)
             Toast.makeText(applicationContext, "Data Written", Toast.LENGTH_SHORT).show()
-            val nextIntent = Intent(this, MainActivity::class.java).apply {}
+            val nextIntent = if(intent.getStringExtra(ADMIN_LOGGED_IN) == "logged in")
+                Intent(this, Dashboard::class.java)
+            else
+                Intent(this, MainActivity::class.java)
             startActivity(nextIntent)
         }
         else

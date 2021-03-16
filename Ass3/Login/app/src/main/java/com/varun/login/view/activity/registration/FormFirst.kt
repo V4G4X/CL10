@@ -7,12 +7,13 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.varun.login.ADMIN_LOGGED_IN
 import com.varun.login.R
 
-const val FIRSTNAME = "com.example.login.view.FIRSTNAME"
-const val LASTNAME = "com.example.login.view.LASTNAME"
-const val EMAIL = "com.example.login.view.EMAIL"
-const val PHONE = "com.example.login.view.PHONE"
+const val FIRSTNAME = "com.varun.login.view.FIRSTNAME"
+const val LASTNAME = "com.varun.login.view.LASTNAME"
+const val EMAIL = "com.varun.login.view.EMAIL"
+const val PHONE = "com.varun.login.view.PHONE"
 
 class FormFirst : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,7 @@ class FormFirst : AppCompatActivity() {
                 putExtra(LASTNAME, lastName)
                 putExtra(EMAIL, emailAddress)
                 putExtra(PHONE, phone)
+                putExtra(ADMIN_LOGGED_IN, intent.getStringExtra(ADMIN_LOGGED_IN))
             }
             startActivity(intent)
         }

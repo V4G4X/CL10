@@ -9,7 +9,8 @@ import android.widget.Toast
 import com.varun.login.view.activity.registration.FormFirst
 import com.varun.login.view.activity.admin.Dashboard
 
-const val USERNAME = "com.example.login.view.USERNAME"
+const val USERNAME = "com.varun.login.view.USERNAME"
+const val ADMIN_LOGGED_IN = "com.varun.login.view.ADMIN_LOGGED_IN"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(applicationContext, "Login Successful" ,Toast.LENGTH_SHORT).show()
             val intent = Intent(this, Dashboard::class.java).apply{
                 putExtra(USERNAME, username)
+                putExtra(ADMIN_LOGGED_IN, "logged out")
             }
             startActivity(intent)
         }

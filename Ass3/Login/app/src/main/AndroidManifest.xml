@@ -10,13 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Login">
         <activity
-            android:name=".view.activity.admin.Dashboard"
-            android:parentActivityName=".MainActivity" />
+            android:name=".view.activity.admin.Dashboard" />
         <activity
             android:name=".view.activity.registration.FormSecond"
             android:parentActivityName=".view.activity.registration.FormFirst" />
-        <activity android:name=".view.activity.registration.FormFirst"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".view.activity.registration.FormFirst"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
