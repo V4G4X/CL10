@@ -1,0 +1,3 @@
+[submodule "Project/Covid_Detection"]
+	path = Project/Covid_Detection
+	url = https://github.com/V4G4X/Covid_Detection.git
