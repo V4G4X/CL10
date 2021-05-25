@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Regulator</string>
+    <string name="title_fan">Fan Regulator:</string>
+    <string name="desc_fan">Fan that Rotates according to Regulator</string>
+</resources>
