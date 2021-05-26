@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.ToggleButton
 import com.google.android.material.slider.Slider
 import android.view.animation.Animation
+import android.view.animation.LinearInterpolator
 
 import android.view.animation.RotateAnimation
 
@@ -51,8 +52,9 @@ class MainActivity : AppCompatActivity() {
             Animation.RELATIVE_TO_SELF,0.5f,
             Animation.RELATIVE_TO_SELF, 0.5f
         )
-        animation.duration = speedToDuration(speed)*1000
+        animation.duration = speedToDuration(speed)*500
         animation.repeatCount = Animation.INFINITE
+        animation.interpolator = LinearInterpolator()
         fan.animation = animation
         fan.startAnimation(animation)
     }
